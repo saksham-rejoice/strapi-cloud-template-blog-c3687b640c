@@ -4,7 +4,8 @@
   "info": {
     "singularName": "blog",
     "pluralName": "blogs",
-    "displayName": "Blog"
+    "displayName": "Blog",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -28,6 +29,10 @@
     },
     "publishDate": {
       "type": "date"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }
