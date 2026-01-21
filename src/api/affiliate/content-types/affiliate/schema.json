@@ -4,7 +4,8 @@
   "info": {
     "singularName": "affiliate",
     "pluralName": "affiliates",
-    "displayName": "affiliate"
+    "displayName": "affiliate",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -27,6 +28,9 @@
       "type": "text"
     },
     "message": {
+      "type": "text"
+    },
+    "full_name": {
       "type": "text"
     }
   }

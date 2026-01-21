@@ -365,6 +365,7 @@ export interface AdminUser extends Schema.CollectionType {
 export interface ApiAffiliateAffiliate extends Schema.CollectionType {
   collectionName: 'affiliates';
   info: {
+    description: '';
     displayName: 'affiliate';
     pluralName: 'affiliates';
     singularName: 'affiliate';
@@ -382,6 +383,7 @@ export interface ApiAffiliateAffiliate extends Schema.CollectionType {
     > &
       Attribute.Private;
     email: Attribute.Text;
+    full_name: Attribute.Text;
     message: Attribute.Text;
     phonenumber: Attribute.String;
     prefix: Attribute.String;
