@@ -362,6 +362,41 @@ export interface AdminUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiAffiliateAffiliate extends Schema.CollectionType {
+  collectionName: 'affiliates';
+  info: {
+    displayName: 'affiliate';
+    pluralName: 'affiliates';
+    singularName: 'affiliate';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    country_code: Attribute.String;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::affiliate.affiliate',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    email: Attribute.Text;
+    message: Attribute.Text;
+    phonenumber: Attribute.String;
+    prefix: Attribute.String;
+    publishedAt: Attribute.DateTime;
+    social_media_link: Attribute.Text;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::affiliate.affiliate',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiBlogBlog extends Schema.CollectionType {
   collectionName: 'blogs';
   info: {
@@ -864,6 +899,7 @@ declare module '@strapi/types' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::affiliate.affiliate': ApiAffiliateAffiliate;
       'api::blog.blog': ApiBlogBlog;
       'api::contact-form.contact-form': ApiContactFormContactForm;
       'plugin::content-releases.release': PluginContentReleasesRelease;

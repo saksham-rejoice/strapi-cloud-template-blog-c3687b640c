@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "affiliates",
+  "info": {
+    "singularName": "affiliate",
+    "pluralName": "affiliates",
+    "displayName": "affiliate"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "prefix": {
+      "type": "string"
+    },
+    "email": {
+      "type": "text"
+    },
+    "country_code": {
+      "type": "string"
+    },
+    "phonenumber": {
+      "type": "string"
+    },
+    "social_media_link": {
+      "type": "text"
+    },
+    "message": {
+      "type": "text"
+    }
+  }
+}
